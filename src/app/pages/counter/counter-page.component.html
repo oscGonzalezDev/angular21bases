@@ -1,0 +1,7 @@
+<h1>Counter: {{counter}}</h1>
+<h1>Counter con Signal: {{counterSignal()}}</h1>
+<!-- A pesar de ser una variable, debo llamarala con parentesis como si fuera una función -->
+
+<button (click)="increaseBy(-1)">-1</button>
+<button (click)="increaseBy(1)">+1</button>
+<button (click)="resetValue()">Reset</button>

@@ -1,0 +1,17 @@
+<h2>dragonball</h2>
+<img src="https://hips.hearstapps.com/hmg-prod/images/dragon-ball-1662030426.jpg?crop=1xw:1xh;0,0.0464xh" width="500" alt="Dragonball">
+
+<hr>
+
+<section class="row">
+    <div class="col-12 col-sm-6">
+        <app-dragonball-add-char [characters]="dbCharacters()"/>
+        <!-- [characters] es la variable definida en el hijo y dbCharacters() la signal/array del padre -->
+    </div>
+
+    <div class="col-12 col-sm-6">
+        <dragonball-character-list listTitle="Listado de personajes" [characters]="dbCharacters()" />
+        <!-- [characters] es la variable definida en el hijo y dbCharacters() la signal/array del padre -->
+        <!-- listTitle es un input.required en character-list -->
+    </div>
+</section>

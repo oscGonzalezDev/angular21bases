@@ -1,0 +1,17 @@
+        <h3>{{listTitle()}}</h3>
+        <ul>
+            <!-- Directivas for y if -->
+            @for (char of characters(); let idx = $index; track char.id) {
+                @if(char.power > 5000){
+                    <li>
+                        <span>{{idx + 1}} - {{char.name}}</span> 
+                        <!-- Estilos condicionales -->
+                        <strong
+                            [class.text-danger]="char.power >= 9000"
+                            [class.text-primary]="char.power < 9000">
+                            ({{char.power}})
+                        </strong>
+                    </li>
+                }
+            }
+        </ul>

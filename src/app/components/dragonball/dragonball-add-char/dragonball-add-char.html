@@ -1,0 +1,18 @@
+<h3>Agregar: {{ dbName() }}</h3>
+    <input type="text" class="form-control"
+    placeholder="Nombre"
+    [value]="dbName()"
+    (change)="dbName.set(txtName.value)"
+    (input)="dbName.set(txtName.value)" #txtName >
+    <!-- (change) e (input)Son para eventos en el input, cuando se cumple el evento se setea el valor de dbName -->
+    <!-- value [value]="dbName()" es el que toma el valor de change -->
+
+    <h4>Poder: {{ dbPower() }}</h4>
+    <input type="number" class="form-control mt-2" placeholder="Poder"
+    [value]="dbPower()"
+    (change)="dbPower.set(+numPower.value)"
+    (input)="dbPower.set(+numPower.value)" #numPower>
+    <!-- El +numPower.value es para parsear el número a letra --> 
+
+    <!-- Add button -->
+    <button class="mt-2 btn btn-primary" (click)="addChar()">Agregar</button>

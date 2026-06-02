@@ -1,0 +1,7 @@
+<nav>
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Contador</a>
+    <!-- [routerLinkActiveOptions]="{ exact: true }" Esto obliga que sea la ruta exacta para aplicar la clase css  -->
+    <a [routerLink]="['/hero']" [routerLinkActive]="'active'">Hero</a>
+    <a [routerLink]="['/dragonball']" [routerLinkActive]="'active'">dragonball</a>
+    <a [routerLink]="['/dragonballsuper']" [routerLinkActive]="'active'">dragonball Super</a>
+</nav>
