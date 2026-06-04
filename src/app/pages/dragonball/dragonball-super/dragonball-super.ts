@@ -16,6 +16,7 @@ export class DragonballSuper {
   dbPower = signal(0);
 
   // <dbCharacter[]> es un generic
+  //Este es el input que va en el componente hijo character-list
   dbCharacters = signal<dbCharacter[]>([
     {
       id: 1,
