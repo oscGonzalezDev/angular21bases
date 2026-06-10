@@ -5,12 +5,15 @@
 
 <section class="row">
     <div class="col-12 col-sm-6">
-        <app-dragonball-add-char/>
-        <!-- [characters] es la variable definida en el hijo y dbCharacters() la signal/array del padre -->
+        <!-- <app-dragonball-add-char (newCharacter)="addCharacters($event)"/> [sin servicio] -->
+         <app-dragonball-add-char (newCharacter)="dragonballService.addCharacters($event)"/>
+        <!-- newCharacter es el evento del hijo -->
+        <!-- "addCharacters($event)" agrega lo recibido del hijo, se recibe un evento del hijo con $event -->
     </div>
 
     <div class="col-12 col-sm-6">
-        <dragonball-character-list listTitle="Listado de personajes" [characters]="dbCharacters()" />
+        <!-- <dragonball-character-list listTitle="Listado de personajes" [characters]="dbCharacters()" [sin servicio] /> -->
+         <dragonball-character-list listTitle="Listado de personajes" [characters]="dragonballService.dbCharacters()" />
         <!-- [characters] es la variable definida en el hijo y dbCharacters() la signal/array del padre -->
         <!-- listTitle es un input.required en character-list -->
     </div>
